@@ -1,6 +1,6 @@
 <?php
 
-class IndexController extends Saffron_AbstractController
+class ContactosController extends Saffron_AbstractController
 {
     public function init()
     {
@@ -11,7 +11,7 @@ class IndexController extends Saffron_AbstractController
     public function indexAction()
     {
         
-        $this->view->headTitle('Hello Interesse');
+        $this->view->headTitle('Catalogo de contactos');
         /*
         $Etiqueta = new Interesse_Model_Etiqueta();
         $etiqueta = $Etiqueta->getId(3);
