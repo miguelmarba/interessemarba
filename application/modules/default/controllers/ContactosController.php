@@ -46,7 +46,6 @@ class ContactosController extends Saffron_AbstractController
         
         $Contacto = new Interesse_Model_Contacto();
         $contactos = $Contacto->getList();
-        var_dump($contactos);exit;
         $this->view->contactos = $contactos;
     }
     
@@ -61,7 +60,15 @@ class ContactosController extends Saffron_AbstractController
         
         $Contacto = new Interesse_Model_Contacto();
         $id = $Contacto->save($nombre, $apellidos, $direccion, $email);
-        var_dump($id);exit;
+        //var_dump($id);exit;
+        try{
+            $responce['result'] = 'success';
+            $responce['id'] = $id;
+            $responce['msg'] = 'El contacto se guardó correctamente. Id: ' . $id;
+            echo json_encode($responce);exit;
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
     }
 
 }

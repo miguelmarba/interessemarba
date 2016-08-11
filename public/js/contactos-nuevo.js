@@ -13,8 +13,24 @@ var ContactosNuevo = {
             ContactosNuevo.validarCampos();
         });
         
+        //Cargamos los contactos
+        ContactosNuevo.listarContactos();
     },// End Init()
     
+    listarContactos : function() {
+        var baseUrl = 'http://localhost/interessemarba/public';
+        var urlList = baseUrl + '/' + 'contactos/list';
+        $.ajax({
+            type: "POST",
+            url: urlList,
+            data:  {i:1},
+            dataType: "html",
+            success: function(response){
+                console.log(response);
+                $(".panel-body").html(response);
+            }
+        });
+    },
     validarCampos : function() {
         var validator = $( "#frmNuevoContacto" ).validate();
         //validator.form();
@@ -24,7 +40,6 @@ var ContactosNuevo = {
     },
     
     guardarContacto : function() {
-        //alert("Hola Miguel Angel ----- guardarContacto"); return false;
         var urlSave = baseUrl + '/' + 'contactos/add';
         $.ajax({
             type: "POST",
@@ -33,13 +48,14 @@ var ContactosNuevo = {
             dataType: "json",
             success: function(response){
                 console.log(response);
-                if( response.success == true){
+                if( response.result == 'success'){
+                    ContactosNuevo.listarContactos();
                     alert("Datos guardados correctamente");
+                    $('#myModal').modal('hide');
                 } else {
                     alert("Error al guardar " + response.msg);
                     return false;
                 }
-                return true;
             }
         });
     },
