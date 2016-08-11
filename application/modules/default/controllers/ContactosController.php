@@ -36,5 +36,32 @@ class ContactosController extends Saffron_AbstractController
          * *
          */
     }
+    
+    public function listAction()
+    {
+        //Desabilitamos el LAYOUT
+        $this->_helper->layout->disableLayout();
+        //Desabilitamos la VISTA
+        //$this->_helper->viewRenderer->setNoRender();
+        
+        $Contacto = new Interesse_Model_Contacto();
+        $contactos = $Contacto->getList();
+        var_dump($contactos);exit;
+        $this->view->contactos = $contactos;
+    }
+    
+    public function addAction()
+    {
+        $data = $this->getRequest()->getPost();
+        
+        $nombre     = $data['nombre'];
+        $apellidos  = $data['apellidos']; 
+        $direccion  = $data['direccion'];
+        $email      = $data['email'];
+        
+        $Contacto = new Interesse_Model_Contacto();
+        $id = $Contacto->save($nombre, $apellidos, $direccion, $email);
+        var_dump($id);exit;
+    }
 
 }

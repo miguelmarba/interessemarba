@@ -496,3 +496,46 @@
   'action' => 'index',
   'module' => 'default',
 )
+2016-08-11T03:23:20-05:00 CRIT (2): Application error
+2016-08-11T03:23:20-05:00 CRIT (2): SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nombre' in 'field list'
+2016-08-11T03:23:20-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Statement.php(303): Zend_Db_Statement_Pdo->_execute(Array)
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Abstract.php(479): Zend_Db_Statement->execute(Array)
+#2 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query('CALL SP_CONTACT...', Array)
+#3 C:\xampp\htdocs\interessemarba\application\models\Contacto.php(13): Zend_Db_Adapter_Pdo_Abstract->query('CALL SP_CONTACT...')
+#4 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\ContactosController.php(50): Interesse_Model_Contacto->save('Miguel', 'Martinez', 'Orquidea', 'miguel_marba@ho...')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): ContactosController->addAction()
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('addAction')
+#7 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#8 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#9 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#10 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#11 {main}
+2016-08-11T03:23:20-05:00 CRIT (2): array (
+  'controller' => 'contactos',
+  'action' => 'add',
+  'module' => 'default',
+  'nombre' => 'Miguel',
+  'apellidos' => 'Martinez',
+  'direccion' => 'Orquidea',
+  'email' => 'miguel_marba@hotmail.com',
+)
+2016-08-11T03:38:50-05:00 CRIT (2): Application error
+2016-08-11T03:38:50-05:00 CRIT (2): SQLSTATE[HY000]: General error
+2016-08-11T03:38:50-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\application\models\Contacto.php(14): Zend_Db_Statement_Pdo->fetchAll()
+#1 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\ContactosController.php(50): Interesse_Model_Contacto->save('Sheyla', 'Bautista', 'Orquidea', 'miguel_marba@ho...')
+#2 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): ContactosController->addAction()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('addAction')
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#7 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#8 {main}
+2016-08-11T03:38:50-05:00 CRIT (2): array (
+  'controller' => 'contactos',
+  'action' => 'add',
+  'module' => 'default',
+  'nombre' => 'Sheyla',
+  'apellidos' => 'Bautista',
+  'direccion' => 'Orquidea',
+  'email' => 'miguel_marba@hotmail.com',
+)

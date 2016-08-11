@@ -5,17 +5,82 @@
     <div class="container marketing">
 
 
+    <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Agregar contacto</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="frmNuevoContacto" name="frmNuevoContacto" method="POST" action="#" >
+                <div class="form-group">
+                  <label for="nombre" class="col-sm-2 control-label">Nombres:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombres" required="" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="apellidos" class="col-sm-2 control-label">Apellidos:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Apellidos">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="direccion" class="col-sm-2 control-label">Dirección:</label>
+                  <div class="col-sm-10">
+                      <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="col-sm-2 control-label">Correo electrónico:</label>
+                  <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@interesse.com.mx">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar teléfono
+                    </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              <button type="button" id="btnGuardarContacto" name="btnGuardarContacto" class="btn btn-primary">Guardar</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
       <!-- START THE FEATURETTES -->
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">La agenda deberá permitir ingresar nuevos contactos como nombre, uno o más números telefónicos, correo electrónico, dirección.</p>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Administrar contactos
+          <button type="button" class="btn btn-default" id='btnNuevoContacto' data-toggle="modal" data-target="#myModal">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo
+          </button>
+          </h3>
+          
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        <div class="panel-body">
+           <!-- Table -->
+            <table class="table">
+                <thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Username</th> </tr> </thead>
+                <tbody> <tr> <th scope="row">1</th> <td>Mark</td> <td>Otto</td> <td>@mdo</td> </tr> <tr> <th scope="row">2</th> <td>Jacob</td> <td>Thornton</td> <td>@fat</td> </tr> <tr> <th scope="row">3</th> <td colspan="2">Larry the Bird</td> <td>@twitter</td> </tr> </tbody>
+            </table>
         </div>
       </div>
 
