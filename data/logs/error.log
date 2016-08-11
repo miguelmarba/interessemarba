@@ -1,0 +1,374 @@
+2016-08-10T03:33:49-05:00 CRIT (2): Application error
+2016-08-10T03:33:49-05:00 CRIT (2): SQLSTATE[HY000] [1049] Unknown database 'interessemarba'
+2016-08-10T03:33:49-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Pdo\Mysql.php(109): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Abstract.php(459): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#2 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `etiqu...', Array)
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Pdo\Mysql.php(169): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `etiqu...')
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(836): Zend_Db_Adapter_Pdo_Mysql->describeTable('etiquetas', NULL)
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(858): Zend_Db_Table_Abstract->_setupMetadata()
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(898): Zend_Db_Table_Abstract->_getCols()
+#7 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(983): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#8 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Select.php(100): Zend_Db_Table_Abstract->info()
+#9 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Select.php(78): Zend_Db_Table_Select->setTable(Object(Interesse_Model_Etiqueta))
+#10 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(1019): Zend_Db_Table_Select->__construct(Object(Interesse_Model_Etiqueta))
+#11 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(1372): Zend_Db_Table_Abstract->select()
+#12 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(11): Zend_Db_Table_Abstract->fetchAll()
+#13 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#14 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#15 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#16 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#17 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#18 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#19 {main}
+2016-08-10T03:33:49-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T03:34:03-05:00 CRIT (2): Application error
+2016-08-10T03:34:03-05:00 CRIT (2): SQLSTATE[HY000] [1049] Unknown database 'interessemarba'
+2016-08-10T03:34:03-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Pdo\Mysql.php(109): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Abstract.php(459): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#2 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `etiqu...', Array)
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Db\Adapter\Pdo\Mysql.php(169): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `etiqu...')
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(836): Zend_Db_Adapter_Pdo_Mysql->describeTable('etiquetas', NULL)
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(858): Zend_Db_Table_Abstract->_setupMetadata()
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(898): Zend_Db_Table_Abstract->_getCols()
+#7 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(983): Zend_Db_Table_Abstract->_setupPrimaryKey()
+#8 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Select.php(100): Zend_Db_Table_Abstract->info()
+#9 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Select.php(78): Zend_Db_Table_Select->setTable(Object(Interesse_Model_Etiqueta))
+#10 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(1019): Zend_Db_Table_Select->__construct(Object(Interesse_Model_Etiqueta))
+#11 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(1372): Zend_Db_Table_Abstract->select()
+#12 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(11): Zend_Db_Table_Abstract->fetchAll()
+#13 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#14 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#15 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#16 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#17 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#18 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#19 {main}
+2016-08-10T03:34:03-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:20:24-05:00 CRIT (2): Application error
+2016-08-10T22:20:24-05:00 CRIT (2): No entry is registered for key 'db'
+2016-08-10T22:20:24-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\application\models\Etiqueta.php(15): Zend_Registry::get('db')
+#1 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(12): Interesse_Model_Etiqueta->getId()
+#2 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#7 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#8 {main}
+2016-08-10T22:20:24-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:26:04-05:00 CRIT (2): Application error
+2016-08-10T22:26:04-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T22:26:04-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T22:26:04-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:35:58-05:00 CRIT (2): Application error
+2016-08-10T22:35:58-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T22:35:58-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T22:35:58-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:36:00-05:00 CRIT (2): Application error
+2016-08-10T22:36:00-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T22:36:00-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T22:36:00-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:36:31-05:00 CRIT (2): Application error
+2016-08-10T22:36:31-05:00 CRIT (2): No database adapter present
+2016-08-10T22:36:31-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Auth\Adapter\DbTable.php(140): Zend_Auth_Adapter_DbTable->_setDbAdapter(NULL)
+#1 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(11): Zend_Auth_Adapter_DbTable->__construct(NULL)
+#2 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#7 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#8 {main}
+2016-08-10T22:36:31-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:40:20-05:00 CRIT (2): Application error
+2016-08-10T22:40:20-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T22:40:20-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T22:40:20-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:43:42-05:00 CRIT (2): Application error
+2016-08-10T22:43:42-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T22:43:42-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T22:43:42-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:57:54-05:00 CRIT (2): Application error
+2016-08-10T22:57:54-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T22:57:54-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T22:57:54-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T22:57:56-05:00 CRIT (2): Application error
+2016-08-10T22:57:56-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T22:57:56-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T22:57:56-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:01:26-05:00 CRIT (2): Application error
+2016-08-10T23:01:26-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:01:26-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:01:26-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:01:27-05:00 CRIT (2): Application error
+2016-08-10T23:01:27-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:01:27-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:01:27-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:01:28-05:00 CRIT (2): Application error
+2016-08-10T23:01:28-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:01:28-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:01:28-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:01:37-05:00 CRIT (2): Application error
+2016-08-10T23:01:37-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:01:37-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:01:37-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:01:52-05:00 CRIT (2): Application error
+2016-08-10T23:01:52-05:00 CRIT (2): No database adapter present
+2016-08-10T23:01:52-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Auth\Adapter\DbTable.php(140): Zend_Auth_Adapter_DbTable->_setDbAdapter(NULL)
+#1 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(11): Zend_Auth_Adapter_DbTable->__construct(NULL)
+#2 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#6 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#7 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#8 {main}
+2016-08-10T23:01:52-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:09:05-05:00 CRIT (2): Application error
+2016-08-10T23:09:05-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:09:05-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(10): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:09:05-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:11:40-05:00 CRIT (2): Application error
+2016-08-10T23:11:40-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:11:40-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(11): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:11:40-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:12:17-05:00 CRIT (2): Application error
+2016-08-10T23:12:17-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:12:17-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(11): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:12:17-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:12:19-05:00 CRIT (2): Application error
+2016-08-10T23:12:19-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:12:19-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(11): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:12:19-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)
+2016-08-10T23:14:46-05:00 CRIT (2): Application error
+2016-08-10T23:14:46-05:00 CRIT (2): No adapter found for Interesse_Model_Etiqueta
+2016-08-10T23:14:46-05:00 CRIT (2): #0 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(740): Zend_Db_Table_Abstract->_setupDatabaseAdapter()
+#1 C:\xampp\htdocs\interessemarba\library\Zend\Db\Table\Abstract.php(269): Zend_Db_Table_Abstract->_setup()
+#2 C:\xampp\htdocs\interessemarba\application\modules\default\controllers\IndexController.php(11): Zend_Db_Table_Abstract->__construct()
+#3 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Action.php(516): IndexController->indexAction()
+#4 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Dispatcher\Standard.php(308): Zend_Controller_Action->dispatch('indexAction')
+#5 C:\xampp\htdocs\interessemarba\library\Zend\Controller\Front.php(954): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#6 C:\xampp\htdocs\interessemarba\library\Zend\Application\Bootstrap\Bootstrap.php(97): Zend_Controller_Front->dispatch()
+#7 C:\xampp\htdocs\interessemarba\init.php(34): Zend_Application_Bootstrap_Bootstrap->run()
+#8 C:\xampp\htdocs\interessemarba\public\index.php(3): Application::run()
+#9 {main}
+2016-08-10T23:14:46-05:00 CRIT (2): array (
+  'controller' => 'index',
+  'action' => 'index',
+  'module' => 'default',
+)

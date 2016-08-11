@@ -1,0 +1,14 @@
+{
+    "name": "zendframework/interessemarba",
+    "description": "Test Application for ZF",
+    "license": "MARBA-1-C",
+    "keywords": [
+        "framework",
+        "zf1"
+    ],
+    "homepage": "http://framework.zend.com/",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "1.12"
+    }
+}
