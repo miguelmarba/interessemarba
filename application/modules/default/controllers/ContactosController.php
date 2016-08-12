@@ -53,13 +53,23 @@ class ContactosController extends Saffron_AbstractController
     {
         $data = $this->getRequest()->getPost();
         
+        $idContacto = $data['idContacto'];
         $nombre     = $data['nombre'];
         $apellidos  = $data['apellidos']; 
         $direccion  = $data['direccion'];
         $email      = $data['email'];
+        $telefonos  = $this->getRequest()->getPost('telefonos',0);
         
         $Contacto = new Interesse_Model_Contacto();
-        $id = $Contacto->save($nombre, $apellidos, $direccion, $email);
+        $id = $Contacto->save($nombre, $apellidos, $direccion, $email, $idContacto);
+        
+        if( $telefonos !=0 ){
+            $Telefono = new Interesse_Model_Telefono();
+            foreach ($telefonos as $numero):
+                $idTel = $Telefono->save($numero, $id, 1);
+            endforeach;
+        }
+        
         //var_dump($id);exit;
         try{
             $responce['result'] = 'success';
@@ -71,4 +81,52 @@ class ContactosController extends Saffron_AbstractController
         }
     }
 
+    public function getAction()
+    {
+        //Desabilitamos el LAYOUT
+        $this->_helper->layout->disableLayout();
+        //Desabilitamos la VISTA
+        //$this->_helper->viewRenderer->setNoRender();
+        
+        $data = $this->getRequest()->getPost();
+        $id     = $data['id'];
+        
+        $Contacto = new Interesse_Model_Contacto();
+        $detalle = $Contacto->getId($id);
+        
+        //var_dump($detalle);exit;
+        try{
+            if($detalle){
+                $idContacto = $detalle[0]['id'];
+                $responce['result'] = 'success';
+                $responce['id'] = $detalle[0]['id'];
+                $responce['nombres'] = $detalle[0]['nombres'];
+                $responce['apellidos'] = $detalle[0]['apellidos'];
+                $responce['direccion'] = $detalle[0]['direccion'];
+                $responce['email'] = $detalle[0]['email'];
+                
+                //Listamos los numeros de telefonos
+                $telefonos = array();
+                $Telefono = new Interesse_Model_Telefono();
+                $listaTels = $Telefono->getByContactoId($idContacto);
+                foreach ($listaTels as $item):
+                    $telefonos[] = array('id' => $item['id'], 'numero' => $item['numero']);
+                endforeach;
+                $responce['telefonos'] = $telefonos;
+            } else {
+                $responce['result'] = 'false';
+                $responce['id'] = $id;
+                $responce['msg'] = 'El contacto no existe.';
+            }
+            
+            echo json_encode($responce);exit;
+        }catch(Exception $e){
+            echo $e->getMessage();exit;
+        }
+    }
+    
+    public function editAction()
+    {
+        
+    }
 }
