@@ -46,7 +46,6 @@ var ContactosNuevo = {
                 data:  {id:id},
                 dataType: "json",
                 success: function(response){
-                    console.log(response);
                     if(response.result = 'success'){
                         $("#idContacto").val(response.id);
                         $("#nombre").val(response.nombres);
@@ -55,7 +54,6 @@ var ContactosNuevo = {
                         $("#email").val(response.email);
                         
                         $.each(response.telefonos, function(i, item) {
-                            console.log('i', item.numero);
                             $("#listTelefonos").append('<div class="col-sm-8"><input type="text" class="form-control" name="telefonos[]" id="campo_'+ item.id +'"  placeholder="Telefono '+ item.id +'" value="'+ item.numero +'" maxlength="15" /><a href="#" class="eliminar glyphicon">&times;</a></div>');
                         });
                         
@@ -67,12 +65,36 @@ var ContactosNuevo = {
             });
         });
         
-        //Cargamos los contactos
-        ContactosNuevo.listarContactos();
+        $("body").on("click",".remove", function(e){ //click en el link editar un telefono
+            var id = 0;
+            id = $(this).attr('idrel');
+            
+            var res = '';
+            res = confirm('¿confirma eliminar el contacto ' + id + '?');
+            
+            if(res){
+                var urlList = baseUrl + '/' + 'contactos/remove';
+                $.ajax({
+                    type: "POST",
+                    url: urlList,
+                    data:  {id:id},
+                    dataType: "json",
+                    success: function(response){
+                        if(response.result = 'success'){
+                            ContactosNuevo.listarContactos();
+                            alert('El contacto se eliminó correctamente existe.');
+                        } else {
+                            alert('El contacto no existe.');
+                        }
+                    }
+                });
+            }    
+        });
+        
+        
     },// End Init()
     
     listarContactos : function() {
-        var baseUrl = 'http://localhost/interessemarba/public';
         var urlList = baseUrl + '/' + 'contactos/list';
         $.ajax({
             type: "POST",
@@ -80,7 +102,6 @@ var ContactosNuevo = {
             data:  {i:1},
             dataType: "html",
             success: function(response){
-                console.log(response);
                 $(".panel-body").html(response);
             }
         });
@@ -101,7 +122,6 @@ var ContactosNuevo = {
             data:  $("#frmNuevoContacto").serialize(),
             dataType: "json",
             success: function(response){
-                console.log(response);
                 if( response.result == 'success'){
                     ContactosNuevo.listarContactos();
                     alert("Datos guardados correctamente");
@@ -125,7 +145,8 @@ var ContactosNuevo = {
 		
 };
 ContactosNuevo.init();
-
+//Cargamos los contactos
+ContactosNuevo.listarContactos();
 
 
 $().ready(function () {
@@ -145,7 +166,6 @@ $().ready(function () {
         },
         submitHandler: function(form) {
             //form.submit();
-            alert("Hola Miguel Angel ----- guardarContact jajajajajajajo");
             ContactosNuevo.guardarContacto();
         }
     });

@@ -26,4 +26,11 @@ class Interesse_Model_Contacto
         $data = $stmt->fetchAll();
         return $data;
     }
+    
+    public function remove($id)
+    {
+        $db = Zend_Registry::get('db');
+        $stmt = $db->query("CALL SP_CONTACTO_REMOVE($id)");
+        return 0;
+    }
 }

@@ -12,29 +12,6 @@ class ContactosController extends Saffron_AbstractController
     {
         
         $this->view->headTitle('Catalogo de contactos');
-        /*
-        $Etiqueta = new Interesse_Model_Etiqueta();
-        $etiqueta = $Etiqueta->getId(3);
-        var_dump($etiqueta);exit;
-        
-        
-        
-        
-        $Etiqueta = new Interesse_Model_Etiqueta();
-        
-        $etiqueta = $Etiqueta->getId($db);
-        var_dump($etiqueta);exit;
-        
-        $etiquetas = $Etiqueta->fetchAll();
-        //var_dump($etiquetas);exit;
-        
-        foreach ($etiquetas as $item):
-            echo '----' . $item['nombre'] . ''; 
-        endforeach;
-        exit;
-        $this->view->etiquetas = $Etiqueta->fetchAll();
-         * *
-         */
     }
     
     public function listAction()
@@ -70,7 +47,6 @@ class ContactosController extends Saffron_AbstractController
             endforeach;
         }
         
-        //var_dump($id);exit;
         try{
             $responce['result'] = 'success';
             $responce['id'] = $id;
@@ -94,7 +70,6 @@ class ContactosController extends Saffron_AbstractController
         $Contacto = new Interesse_Model_Contacto();
         $detalle = $Contacto->getId($id);
         
-        //var_dump($detalle);exit;
         try{
             if($detalle){
                 $idContacto = $detalle[0]['id'];
@@ -125,8 +100,22 @@ class ContactosController extends Saffron_AbstractController
         }
     }
     
-    public function editAction()
+    public function removeAction()
     {
+        $data = $this->getRequest()->getPost();
         
+        $id = $data['id'];
+        
+        $Contacto = new Interesse_Model_Contacto();
+        $res = $Contacto->remove($id);
+        
+        try{
+            $responce['result'] = 'success';
+            $responce['id'] = $id;
+            $responce['msg'] = 'El contacto se guardó correctamente. Id: ' . $id;
+            echo json_encode($responce);exit;
+        }catch(Exception $e){
+            echo $e->getMessage();
+        }
     }
 }
